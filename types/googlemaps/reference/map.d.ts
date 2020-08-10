@@ -133,12 +133,12 @@ declare namespace google.maps {
     }
 
     /** @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map Maps JavaScript API} */
-    class Map<E extends Element = Element> extends MVCObject {
+    class Map extends MVCObject {
         /**
          * Creates a new map inside of the given HTML container, which is typically a DIV element.
          * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.constructor Maps JavaScript API}
          */
-        constructor(mapDiv: E, opts?: MapOptions);
+        constructor(mapDiv: Element, opts?: MapOptions);
 
         /**
          * @see {@link MapHandlerMap#bounds_changed bounds_changed} event
@@ -216,7 +216,7 @@ declare namespace google.maps {
         getClickableIcons(): boolean;
 
         /** @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.getDiv Maps JavaScript API} */
-        getDiv(): E;
+        getDiv(): Element;
 
         /**
          * Returns the compass heading of aerial imagery.
